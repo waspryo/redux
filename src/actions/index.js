@@ -1,5 +1,11 @@
-export const increment = () => {
+export const increment = (nr) => {
   return {
-    type: "INCREMENT"
+    type: "INCREMENT",
+    payload: nr
+  };
+};
+export const decrement = () => {
+  return {
+    type: "DECREMENT"
   };
 };

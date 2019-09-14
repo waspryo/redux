@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { useSelector, useDispatch } from "react-redux";
-import { increment } from "./actions";
+import { increment, decrement } from "./actions";
  
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="App">
       <h1>Counter {counter}</h1>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button>-</button>
+      <button onClick={() => dispatch(increment(5))}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
       {isLogged ? <h3>Valuable Information I should'nt see</h3> : ''}
     </div>
   );
